@@ -1,0 +1,209 @@
+/* Déclaration de la police personnalisée */
+@font-face {
+  font-family: 'Helvetica Neue Medium';
+  src: url('Font/HelveticaNeueLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Appliquer la police à tout le site */
+body {
+  font-family: 'Helvetica Neue Medium', Arial, sans-serif;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 16vw;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar p, .sidebar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-bottom: 1vw;
+  display: block;
+  font-size: 1.3vw;
+}
+
+.sidebar p:hover, .sidebar a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.sidebar img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2vw;
+}
+
+/* Ajout d'une marge en bas du contenu pour éviter le chevauchement avec le footer */
+.main-content {
+  margin-left: 16vw;
+  padding: 20px;
+  display: flex;
+  flex-grow: 1;
+  height: auto; /* Ajustement de la hauteur pour permettre le scroll complet */
+}
+
+.projects {
+  display: flex;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.projects-column {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-column img {
+  width: 100%;
+  margin-bottom: 0.3vw;
+  object-fit: cover;
+}
+
+/* Supprimer le soulignement des liens des projets */
+.projects-column a {
+  text-decoration: none; /* Enlève le soulignement pour les liens */
+  color: black; /* Définit la couleur noire pour le lien */
+}
+
+.projects-column a:hover {
+  text-decoration: none; /* S'assure que le lien ne soit pas souligné au survol */
+  color: black; /* La couleur reste noire au survol */
+}
+
+.project-title {
+  font-size: 1.3vw; /* Taille du texte */
+  margin-top: 5px; /* Petit espace entre l'image et le texte */
+  text-align: center; /* Centre le texte sous l'image */
+  margin-bottom: 0.5vw;
+  color: black; /* Assure que le texte est en noir */
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.3vw;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.projects-column img {
+  cursor: pointer; /* Change le curseur en main pour montrer que c'est cliquable */
+}
+
+/* Organisation en 2 colonnes pour le titre et la description */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2vw;
+}
+
+.project-header .left {
+  width: 45%;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.project-header .right {
+  width: 50%;
+  font-size: 1.3vw;
+  line-height: 1.5;
+}
+
+/* Organisation des images et du texte */
+.project-images {
+  display: flex;
+  flex-direction: column; /* S'assure que les textes sont ensemble avant les images */
+  width: 100%;
+}
+
+/* Conteneur du texte (titre + description) */
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1vw;
+}
+
+.text-container .column {
+  width: 50%;
+}
+
+.text-container .column .text {
+  text-align: left;
+}
+
+.text-container .column:first-child .text {
+  font-family: 'Helvetica Neue Light', Arial, sans-serif;
+  font-size: 1.3vw;
+  justify-content: center;
+}
+
+.text-container .column:last-child .text {
+  font-size: 0.75vw; /* Taille du texte plus petite */
+  line-height: 1.5;
+}
+
+/* Alignement des images */
+.image-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.image-columns .column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-columns img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* Organisation des images en 3 colonnes */
+/* Organisation des images en 3 colonnes (au milieu) */
+.image-three-columns {
+  display: flex;
+  justify-content: space-between; /* Répartit uniformément les colonnes */
+  width: 100%;
+}
+
+
+.image-three-columns img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
